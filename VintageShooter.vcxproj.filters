@@ -13,13 +13,40 @@
     <ClCompile Include="src\ofApp.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Pawn.cpp">
+      <Filter>src\GameObject</Filter>
+    </ClCompile>
     <ClCompile Include="src\GameObject.cpp">
-      <Filter>src</Filter>
+      <Filter>src\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sprite.cpp">
+      <Filter>src\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlayerShip.cpp">
+      <Filter>src\GameObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Turret.cpp">
+      <Filter>src\GameObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Transform.cpp">
+      <Filter>src\GameObject</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
       <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\GameObject">
+      <UniqueIdentifier>{8712accf-0665-4e23-bf08-6baf97cf000d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Sprite">
+      <UniqueIdentifier>{d5e8273c-5a6d-42f0-8f14-f897f683c7b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ParticalSystem">
+      <UniqueIdentifier>{a8666a96-c085-4bda-ab87-9ed451b1c272}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\GameObject\Player">
+      <UniqueIdentifier>{0eccd192-8792-4925-9e7f-309d5a8e2a7c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -29,8 +56,26 @@
     <ClInclude Include="src\ofApp.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\GameObject.h">
+    <ClInclude Include="src\main.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pawn.h">
+      <Filter>src\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject.h">
+      <Filter>src\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sprite.h">
+      <Filter>src\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlayerShip.h">
+      <Filter>src\GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Turret.h">
+      <Filter>src\GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Transform.h">
+      <Filter>src\GameObject</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-//#include "GameObject.h"
+#include "main.h"
 
 class ofApp : public ofBaseApp{
 
@@ -26,7 +26,7 @@ class ofApp : public ofBaseApp{
 
 		bool click_inside;
 
-		//vector<GameObject> gameObjects;
+		vector<GameObject*> gameObjects;
 		glm::vec3 mouse_position;
 		float angle;
 		

@@ -11,13 +11,18 @@ void ofApp::setup(){
 	//triangle.position = glm::vec3(100, 100, 0);
 	//gameObjects.push_back(triangle);
 
+	Turret* turret = new Turret();
+	turret->sprite.load("E:\Pictures\D0GcNaRV4AEfCqZ.jpg");
+	turret->transform.position = glm::vec3(100, 100, 100);
+	gameObjects.push_back(turret);
+
 	width = 80;
 	height = 80;
 	position_rect = glm::vec3(100, 100, 0);
 
-	verts_triangle.push_back(glm::vec3(0, 0, 0));
-	verts_triangle.push_back(glm::vec3(100, 0, 0));
-	verts_triangle.push_back(glm::vec3(0, 100, 0));
+	verts_triangle.push_back(glm::vec3(-50, -50, 0));
+	verts_triangle.push_back(glm::vec3(50, 0, 0));
+	verts_triangle.push_back(glm::vec3(0, 50, 0));
 	position_triangle = glm::vec3(200, 200, 0);
 }
 
@@ -32,8 +37,9 @@ void ofApp::draw(){
 	ofDrawTriangle(glm::vec3(glm::vec4(verts_triangle[0], 1.0) * rotation) + position_triangle,
 		glm::vec3(glm::vec4(verts_triangle[1], 1.0) * rotation) + position_triangle,
 		glm::vec3(glm::vec4(verts_triangle[2], 1.0) * rotation) + position_triangle);
-	//for (vector<GameObject>::iterator it = gameObjects.begin(); it != gameObjects.end(); ++it)
-		//it->draw();
+	for (vector<GameObject*>::iterator it = gameObjects.begin(); it != gameObjects.end(); ++it) {
+		(**it).draw();
+	}
 }
 
 //--------------------------------------------------------------
@@ -54,6 +60,14 @@ void ofApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void ofApp::mouseMoved(int x, int y ){
+	for (vector<GameObject*>::iterator it = gameObjects.begin(); it != gameObjects.end(); ++it) {
+		(**it).mouseMoved(x, y);
+	}
+	//float dx = x - position_triangle.x;
+	//float dy = y - position_triangle.y;
+	//angle = atan2(dx, dy);
+	//rotation = glm::rotate(angle, glm::vec3(0.0f, 0.0f, 1.0f));
+	//cout << angle << endl;
 }
 
 //--------------------------------------------------------------

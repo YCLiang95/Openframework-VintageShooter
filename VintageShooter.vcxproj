@@ -183,10 +183,21 @@
     <ClCompile Include="src\GameObject.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
+    <ClCompile Include="src\Pawn.cpp" />
+    <ClCompile Include="src\PlayerShip.cpp" />
+    <ClCompile Include="src\Sprite.cpp" />
+    <ClCompile Include="src\Transform.cpp" />
+    <ClCompile Include="src\Turret.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\GameObject.h" />
+    <ClInclude Include="src\main.h" />
     <ClInclude Include="src\ofApp.h" />
+    <ClInclude Include="src\Pawn.h" />
+    <ClInclude Include="src\PlayerShip.h" />
+    <ClInclude Include="src\Sprite.h" />
+    <ClInclude Include="src\Transform.h" />
+    <ClInclude Include="src\Turret.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
