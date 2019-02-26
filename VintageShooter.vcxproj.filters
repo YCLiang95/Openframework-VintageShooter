@@ -31,6 +31,15 @@
     <ClCompile Include="src\Transform.cpp">
       <Filter>src\GameObject</Filter>
     </ClCompile>
+    <ClCompile Include="src\MouseCursor.cpp">
+      <Filter>src\GameObject\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Partical.cpp">
+      <Filter>src\GameObject\ParticalSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ParticalEmitter.cpp">
+      <Filter>src\GameObject\ParticalSystem</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -47,6 +56,9 @@
     </Filter>
     <Filter Include="src\GameObject\ParticalSystem">
       <UniqueIdentifier>{a8666a96-c085-4bda-ab87-9ed451b1c272}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\GameObject\UI">
+      <UniqueIdentifier>{7b59ca32-41c2-47d0-97e5-337b3efb86be}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -82,6 +94,9 @@
     </ClInclude>
     <ClInclude Include="src\Partical.h">
       <Filter>src\GameObject\ParticalSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MouseCursor.h">
+      <Filter>src\GameObject\UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

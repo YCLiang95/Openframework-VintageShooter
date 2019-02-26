@@ -182,7 +182,10 @@
   <ItemGroup>
     <ClCompile Include="src\GameObject.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MouseCursor.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
+    <ClCompile Include="src\Partical.cpp" />
+    <ClCompile Include="src\ParticalEmitter.cpp" />
     <ClCompile Include="src\Pawn.cpp" />
     <ClCompile Include="src\PlayerShip.cpp" />
     <ClCompile Include="src\Sprite.cpp" />
@@ -192,6 +195,7 @@
   <ItemGroup>
     <ClInclude Include="src\GameObject.h" />
     <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\MouseCursor.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="src\Partical.h" />
     <ClInclude Include="src\ParticalEmitter.h" />

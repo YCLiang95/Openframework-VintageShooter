@@ -1,14 +1,14 @@
 #include "Transform.h"
 
 glm::vec3 Transform::getPosition() { 
-	if (parent != NULL) 
+	if (parent != NULL)
 		return parent->getPosition() + position; 
 	else 
 		return position; 
 };
 
 float Transform::getAngle() {
-	if (parent != NULL)
+	if (!indenpendentRotation && parent != NULL)
 		return parent->getAngle() + angle;
 	else
 		return angle;
@@ -27,7 +27,7 @@ void Transform::update() {
 		else
 			speed = max(speed, -maxSpeed);
 	} else {
-		speed *= 0.5f;
+		speed *= (1.0f - drag);
 		if (abs(speed) < 0.05f) speed = 0.0f;
 	}
 	if (abs(speed) > 0.0f) {

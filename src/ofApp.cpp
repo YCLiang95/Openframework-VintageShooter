@@ -2,6 +2,10 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+	MouseCursor* mouse = new MouseCursor();
+	mouse->sprite.load("crosshair.png");
+	gameObjects.push_back(mouse);
+
 	PlayerShip* Ship = new PlayerShip();
 	Ship->sprite.load("test2.jpg");
 	Ship->transform.position = glm::vec3(300, 300, 0);
