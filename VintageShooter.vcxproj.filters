@@ -13,26 +13,47 @@
     <ClCompile Include="src\ofApp.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Pawn.cpp">
-      <Filter>src\GameObject</Filter>
+    <ClCompile Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxBaseGui.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxButton.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxColorPicker.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxGuiGroup.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxInputField.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxLabel.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxPanel.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxSlider.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxSliderGroup.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxToggle.cpp">
+      <Filter>addons\ofxGui\src</Filter>
     </ClCompile>
     <ClCompile Include="src\GameObject.cpp">
       <Filter>src\GameObject</Filter>
     </ClCompile>
+    <ClCompile Include="src\Pawn.cpp">
+      <Filter>src\GameObject</Filter>
+    </ClCompile>
     <ClCompile Include="src\Sprite.cpp">
-      <Filter>src\Sprite</Filter>
-    </ClCompile>
-    <ClCompile Include="src\PlayerShip.cpp">
-      <Filter>src\GameObject\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Turret.cpp">
-      <Filter>src\GameObject\Player</Filter>
+      <Filter>src\GameObject</Filter>
     </ClCompile>
     <ClCompile Include="src\Transform.cpp">
       <Filter>src\GameObject</Filter>
-    </ClCompile>
-    <ClCompile Include="src\MouseCursor.cpp">
-      <Filter>src\GameObject\UI</Filter>
     </ClCompile>
     <ClCompile Include="src\Partical.cpp">
       <Filter>src\GameObject\ParticalSystem</Filter>
@@ -40,48 +61,105 @@
     <ClCompile Include="src\ParticalEmitter.cpp">
       <Filter>src\GameObject\ParticalSystem</Filter>
     </ClCompile>
+    <ClCompile Include="src\PlayerShip.cpp">
+      <Filter>src\GameObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Turret.cpp">
+      <Filter>src\GameObject\Player</Filter>
+    </ClCompile>
     <ClCompile Include="src\Button.cpp">
-      <Filter>src\GameObject\UI</Filter>
+      <Filter>src\GameObject\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MouseCursor.cpp">
+      <Filter>src\GameObject\GUI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
       <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\GameObject">
-      <UniqueIdentifier>{8712accf-0665-4e23-bf08-6baf97cf000d}</UniqueIdentifier>
+    <Filter Include="addons">
+      <UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Sprite">
-      <UniqueIdentifier>{d5e8273c-5a6d-42f0-8f14-f897f683c7b4}</UniqueIdentifier>
+    <Filter Include="addons\ofxGui">
+      <UniqueIdentifier>{4F2A59AF-5F4E-704B-D067-EC13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxGui\src">
+      <UniqueIdentifier>{645E9533-4DCD-6179-1CDF-CB65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\GameObject">
+      <UniqueIdentifier>{093ba418-c0a4-49da-82bc-5545618ecb79}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\GameObject\Player">
-      <UniqueIdentifier>{0eccd192-8792-4925-9e7f-309d5a8e2a7c}</UniqueIdentifier>
+      <UniqueIdentifier>{f7506833-d48e-46f0-9f2f-15efdf410658}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\GameObject\ParticalSystem">
-      <UniqueIdentifier>{a8666a96-c085-4bda-ab87-9ed451b1c272}</UniqueIdentifier>
+      <UniqueIdentifier>{bc7906dd-c8fe-44d0-b6b6-0901d00e8d5a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\GameObject\UI">
-      <UniqueIdentifier>{7b59ca32-41c2-47d0-97e5-337b3efb86be}</UniqueIdentifier>
+    <Filter Include="src\GameObject\GUI">
+      <UniqueIdentifier>{f3a00d66-9948-41c0-89a0-60c9b2641a85}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ofApp.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\ofApp.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="src\main.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pawn.h">
-      <Filter>src\GameObject</Filter>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxBaseGui.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxButton.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxColorPicker.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxGui.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxGuiGroup.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxInputField.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxLabel.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxPanel.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxSlider.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxSliderGroup.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxToggle.h">
+      <Filter>addons\ofxGui\src</Filter>
     </ClInclude>
     <ClInclude Include="src\GameObject.h">
       <Filter>src\GameObject</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pawn.h">
+      <Filter>src\GameObject</Filter>
+    </ClInclude>
     <ClInclude Include="src\Sprite.h">
-      <Filter>src\Sprite</Filter>
+      <Filter>src\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Transform.h">
+      <Filter>src\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Partical.h">
+      <Filter>src\GameObject\ParticalSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ParticalEmitter.h">
+      <Filter>src\GameObject\ParticalSystem</Filter>
     </ClInclude>
     <ClInclude Include="src\PlayerShip.h">
       <Filter>src\GameObject\Player</Filter>
@@ -89,20 +167,11 @@
     <ClInclude Include="src\Turret.h">
       <Filter>src\GameObject\Player</Filter>
     </ClInclude>
-    <ClInclude Include="src\Transform.h">
-      <Filter>src\GameObject</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ParticalEmitter.h">
-      <Filter>src\GameObject\ParticalSystem</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Partical.h">
-      <Filter>src\GameObject\ParticalSystem</Filter>
+    <ClInclude Include="src\Button.h">
+      <Filter>src\GameObject\GUI</Filter>
     </ClInclude>
     <ClInclude Include="src\MouseCursor.h">
-      <Filter>src\GameObject\UI</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Button.h">
-      <Filter>src\GameObject\UI</Filter>
+      <Filter>src\GameObject\GUI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

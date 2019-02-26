@@ -1,6 +1,8 @@
 #pragma once
 #include "Pawn.h"
 
+//Player controlled ship
+//For now, it just move with key pressed
 class PlayerShip : public Pawn {
 public:
 	virtual void keyPressed(int key) override;

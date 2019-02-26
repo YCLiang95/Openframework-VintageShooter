@@ -7,8 +7,11 @@ void ParticalEmitter::update() {
 			spawn();
 		}
 	}
+
+	//Update all particals
 	for (vector<Partical*>::iterator it = particals.begin(); it != particals.end();) {
 		(**it).update();
+		//Removed dead particals
 		if ((**it).isDead) {
 			it = particals.erase(it);
 			//cout << "Partical Despawn!" << endl;
@@ -18,6 +21,8 @@ void ParticalEmitter::update() {
 	}
 }
 
+//Spawn a new partical
+//This part will be modulized later for more flexibility
 void ParticalEmitter::spawn() {
 	//cout << "Partical Spawn!" << endl;
 	timeLastSpawn = ofGetElapsedTimeMillis();

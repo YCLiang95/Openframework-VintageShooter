@@ -2,6 +2,9 @@
 #include "GameObject.h"
 #include "Sprite.h"
 
+
+//Mouse cursor icon
+//Namely the crosshair
 class MouseCursor : public GameObject {
 public:
 	Sprite sprite;

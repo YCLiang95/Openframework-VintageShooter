@@ -23,7 +23,11 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-		//Button startButton;
+		ofxPanel gui;
+		ofxFloatSlider RoF;
+		Turret* gun;
+
+		Button startButton;
 		bool gameStart = false;
 		vector<GameObject*> gameObjects;
 		void startGame();

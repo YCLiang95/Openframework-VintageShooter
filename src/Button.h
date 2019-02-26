@@ -2,6 +2,10 @@
 #include "GameObject.h"
 #include "Sprite.h"
 
+
+//My own custom button class
+//Not finished yet, might not be included in the future
+//Becuase OF gui class are convienet
 class Button : public GameObject{
 public:
 	Sprite sprite_normal;

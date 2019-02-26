@@ -3,6 +3,8 @@
 #include "ofMain.h"
 #include "Transform.h"
 
+//Similar to unity, game objects are objects that can be placed in to the world
+//It's the base class, for now it's mostly empty
 class GameObject {
 
 public:
@@ -16,6 +18,7 @@ public:
 	GameObject();
 	~GameObject() {};
 
+	//Some event pass in just for override
 	void virtual keyPressed(int key) {};
 	void virtual keyReleased(int key) {};
 	void virtual mouseMoved(int x, int y) {};
@@ -23,6 +26,7 @@ public:
 	void virtual mousePressed(int x, int y, int button) {};
 	void virtual mouseReleased(int x, int y, int button) {};
 
-	void collision(glm::vec3);
+
+	//void collision(glm::vec3);
 
 };

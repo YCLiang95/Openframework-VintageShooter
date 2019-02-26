@@ -2,14 +2,16 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	//startButton = Button();
-	//startButton.transform.position = glm::vec3(200, 200, 0);
-	//startButton.sprite_normal.load("Start_red.png");
-	//startButton.sprite_hover.load("Start_yellow.png");
+	startButton = Button();
+	startButton.transform.position = glm::vec3(200, 200, 0);
+	startButton.sprite_normal.load("Start_red.png");
+	startButton.sprite_hover.load("Start_yellow.png");
 }
 
 void ofApp::startGame() {
-	//startButton.~Button();
+	startButton.~Button();
+	gui.setup();
+	gui.add(RoF.setup("Fire interval", 1000, 100, 3000));
 
 	MouseCursor* mouse = new MouseCursor();
 	mouse->sprite.load("crosshair.png");
@@ -24,11 +26,14 @@ void ofApp::startGame() {
 	turret->sprite.load("Turret.png");
 	turret->transform.position = glm::vec3(0, 0, 0);
 	turret->transform.parent = &Ship->transform;
+	gun = turret;
 	gameObjects.push_back(turret);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
+	if (gameStart)
+		gun->gun.interval = RoF;
 	for (vector<GameObject*>::iterator it = gameObjects.begin(); it != gameObjects.end(); ++it) {
 		(**it).update();
 	}
@@ -36,7 +41,8 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	//if (!gameStart) startButton.draw();
+	if (!gameStart) startButton.draw();
+	gui.draw();
 	for (vector<GameObject*>::iterator it = gameObjects.begin(); it != gameObjects.end(); ++it) {
 		(**it).draw();
 	}

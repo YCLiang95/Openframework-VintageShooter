@@ -28,9 +28,12 @@ void Turret::keyReleased(int key) {
 	}
 }
 
+//Most part are the same as it's parent pawn
 void Turret::draw() {
 	ofPushMatrix();
 		ofTranslate(transform.getPosition());
+		//Becase turrent roate follows mouse
+		//It should not inherate parent's rotation
 		ofRotate(transform.angle * 180 / PI);
 		ofPushMatrix();
 			ofTranslate(-sprite.image.getWidth() / 2, -sprite.image.getHeight() / 2);
@@ -40,6 +43,9 @@ void Turret::draw() {
 	gun.draw();
 }
 
+//Constructor
+//Temporary put the emitter set up code here
+//They will be moved to the partical system once finished
 Turret::Turret() {
 	gun = ParticalEmitter();
 	gun.transform.parent = &transform;
