@@ -193,6 +193,8 @@
     <ClInclude Include="src\GameObject.h" />
     <ClInclude Include="src\main.h" />
     <ClInclude Include="src\ofApp.h" />
+    <ClInclude Include="src\Partical.h" />
+    <ClInclude Include="src\ParticalEmitter.h" />
     <ClInclude Include="src\Pawn.h" />
     <ClInclude Include="src\PlayerShip.h" />
     <ClInclude Include="src\Sprite.h" />

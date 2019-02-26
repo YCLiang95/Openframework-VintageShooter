@@ -7,6 +7,15 @@ public:
 	float angle;
 	Transform* parent;
 
-	glm::vec3 getPosition() { if (parent != NULL) return parent->getPosition() + position; else return position; };
+	float turningSpeed = 0.0f;
 
+	float speed = 0.0f;
+	float acceration = 0.0f;
+	float maxSpeed = 1.0f;
+	glm::vec3 direction = glm::vec3(0, -1, 0);
+
+	glm::vec3 getPosition();
+	float getAngle();
+
+	void update();
 };

@@ -42,11 +42,11 @@
     <Filter Include="src\Sprite">
       <UniqueIdentifier>{d5e8273c-5a6d-42f0-8f14-f897f683c7b4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\ParticalSystem">
-      <UniqueIdentifier>{a8666a96-c085-4bda-ab87-9ed451b1c272}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\GameObject\Player">
       <UniqueIdentifier>{0eccd192-8792-4925-9e7f-309d5a8e2a7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\GameObject\ParticalSystem">
+      <UniqueIdentifier>{a8666a96-c085-4bda-ab87-9ed451b1c272}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +76,12 @@
     </ClInclude>
     <ClInclude Include="src\Transform.h">
       <Filter>src\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ParticalEmitter.h">
+      <Filter>src\GameObject\ParticalSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Partical.h">
+      <Filter>src\GameObject\ParticalSystem</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

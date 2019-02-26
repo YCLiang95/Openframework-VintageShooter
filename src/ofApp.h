@@ -21,19 +21,6 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-		bool ofApp::insideShape();
-		float area(glm::vec3 a, glm::vec3 b, glm::vec3 c);
-
-		bool click_inside;
 
 		vector<GameObject*> gameObjects;
-		glm::vec3 mouse_position;
-		float angle;
-		
-		vector<glm::vec3> verts_triangle;
-		glm::vec3 position_triangle;
-		glm::mat4 rotation;
-
-		int height, width;
-		glm::vec3 position_rect;
 };
