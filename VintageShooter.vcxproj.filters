@@ -40,6 +40,9 @@
     <ClCompile Include="src\ParticalEmitter.cpp">
       <Filter>src\GameObject\ParticalSystem</Filter>
     </ClCompile>
+    <ClCompile Include="src\Button.cpp">
+      <Filter>src\GameObject\UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -96,6 +99,9 @@
       <Filter>src\GameObject\ParticalSystem</Filter>
     </ClInclude>
     <ClInclude Include="src\MouseCursor.h">
+      <Filter>src\GameObject\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Button.h">
       <Filter>src\GameObject\UI</Filter>
     </ClInclude>
   </ItemGroup>

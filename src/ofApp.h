@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxGui.h"
 #include "main.h"
 
 class ofApp : public ofBaseApp{
@@ -22,5 +23,8 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
+		//Button startButton;
+		bool gameStart = false;
 		vector<GameObject*> gameObjects;
+		void startGame();
 };

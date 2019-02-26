@@ -2,17 +2,26 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+	//startButton = Button();
+	//startButton.transform.position = glm::vec3(200, 200, 0);
+	//startButton.sprite_normal.load("Start_red.png");
+	//startButton.sprite_hover.load("Start_yellow.png");
+}
+
+void ofApp::startGame() {
+	//startButton.~Button();
+
 	MouseCursor* mouse = new MouseCursor();
 	mouse->sprite.load("crosshair.png");
 	gameObjects.push_back(mouse);
 
 	PlayerShip* Ship = new PlayerShip();
-	Ship->sprite.load("test2.jpg");
+	Ship->sprite.load("ship.png");
 	Ship->transform.position = glm::vec3(300, 300, 0);
 	gameObjects.push_back(Ship);
 
 	Turret* turret = new Turret();
-	turret->sprite.load("test.jpg");
+	turret->sprite.load("Turret.png");
 	turret->transform.position = glm::vec3(0, 0, 0);
 	turret->transform.parent = &Ship->transform;
 	gameObjects.push_back(turret);
@@ -27,6 +36,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+	//if (!gameStart) startButton.draw();
 	for (vector<GameObject*>::iterator it = gameObjects.begin(); it != gameObjects.end(); ++it) {
 		(**it).draw();
 	}
@@ -34,6 +44,10 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
+	if (!gameStart && key == ' ') {
+		gameStart = true;
+		startGame();
+	}
 	for (vector<GameObject*>::iterator it = gameObjects.begin(); it != gameObjects.end(); ++it) {
 		(**it).keyPressed(key);
 	}
