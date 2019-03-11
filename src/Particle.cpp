@@ -1,13 +1,13 @@
-#include "Partical.h"
+#include "Particle.h"
 
-void Partical::update() {
+void Particle::update() {
 	if (ofGetElapsedTimeMillis() - timeOfSpawn > lifeSpan) isDead = true;
 	transform.speed = speed;
 	transform.direction = direction;
 	transform.update();
 }
 
-void Partical::draw() {
+void Particle::draw() {
 	ofPushMatrix();
 		ofTranslate(transform.getPosition());
 		ofRotate(transform.getAngle() * 180 / PI);

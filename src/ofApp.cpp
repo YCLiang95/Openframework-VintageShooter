@@ -1,7 +1,10 @@
 #include "ofApp.h"
 
+ofApp* ofApp::game;
+
 //--------------------------------------------------------------
 void ofApp::setup(){
+	game = this;
 	startButton = Button();
 	startButton.transform.position = glm::vec3(200, 200, 0);
 	startButton.sprite_normal.load("Start_red.png");
@@ -28,6 +31,8 @@ void ofApp::startGame() {
 	turret->transform.parent = &Ship->transform;
 	gun = turret;
 	gameObjects.push_back(turret);
+
+	ParticleSystem* enemySpawner = new ParticleSystem();
 }
 
 //--------------------------------------------------------------

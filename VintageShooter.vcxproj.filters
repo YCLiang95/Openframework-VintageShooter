@@ -49,17 +49,8 @@
     <ClCompile Include="src\Pawn.cpp">
       <Filter>src\GameObject</Filter>
     </ClCompile>
-    <ClCompile Include="src\Sprite.cpp">
-      <Filter>src\GameObject</Filter>
-    </ClCompile>
     <ClCompile Include="src\Transform.cpp">
       <Filter>src\GameObject</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Partical.cpp">
-      <Filter>src\GameObject\ParticalSystem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ParticalEmitter.cpp">
-      <Filter>src\GameObject\ParticalSystem</Filter>
     </ClCompile>
     <ClCompile Include="src\PlayerShip.cpp">
       <Filter>src\GameObject\Player</Filter>
@@ -72,6 +63,21 @@
     </ClCompile>
     <ClCompile Include="src\MouseCursor.cpp">
       <Filter>src\GameObject\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Particle.cpp">
+      <Filter>src\GameObject\ParticalSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ParticleEmitter.cpp">
+      <Filter>src\GameObject\ParticalSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sprite.cpp">
+      <Filter>src\GameObject\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Bullet.cpp">
+      <Filter>src\GameObject\ParticalSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSystem.cpp">
+      <Filter>src\GameObject\ParticalSystem</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +104,12 @@
     </Filter>
     <Filter Include="src\GameObject\GUI">
       <UniqueIdentifier>{f3a00d66-9948-41c0-89a0-60c9b2641a85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\GameObject\Sprite">
+      <UniqueIdentifier>{8109904e-1770-496d-bd2f-13b4b17c0d10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\GameObject\Enemy">
+      <UniqueIdentifier>{d840d9e6-d461-45d8-ad7b-bed85ba1a46c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -149,17 +161,8 @@
     <ClInclude Include="src\Pawn.h">
       <Filter>src\GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="src\Sprite.h">
-      <Filter>src\GameObject</Filter>
-    </ClInclude>
     <ClInclude Include="src\Transform.h">
       <Filter>src\GameObject</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Partical.h">
-      <Filter>src\GameObject\ParticalSystem</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ParticalEmitter.h">
-      <Filter>src\GameObject\ParticalSystem</Filter>
     </ClInclude>
     <ClInclude Include="src\PlayerShip.h">
       <Filter>src\GameObject\Player</Filter>
@@ -172,6 +175,27 @@
     </ClInclude>
     <ClInclude Include="src\MouseCursor.h">
       <Filter>src\GameObject\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Particle.h">
+      <Filter>src\GameObject\ParticalSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ParticleEmitter.h">
+      <Filter>src\GameObject\ParticalSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ParticleSystem.h">
+      <Filter>src\GameObject\ParticalSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sprite.h">
+      <Filter>src\GameObject\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Zombie.h">
+      <Filter>src\GameObject\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bullet.h">
+      <Filter>src\GameObject\ParticalSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AnimatedSprite.h">
+      <Filter>src\GameObject\Sprite</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

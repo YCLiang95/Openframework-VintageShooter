@@ -1,12 +1,13 @@
 #pragma once
 #include "Sprite.h"
-#include "Partical.h"
-#include "GameObject.h"
+#include "Particle.h"
+#include "Pawn.h"
 #include "ofMain.h"
 
-class ParticalEmitter: public GameObject {
+class ParticleEmitter: public GameObject {
 public:
 	Sprite sprite;
+	Pawn particle;
 
 	//How long spawned partical should lived, in mil-sec
 	float lifeSpan;
@@ -28,7 +29,7 @@ public:
 
 	//The particals emitted by this emiters
 	//This might be move to partical system class in the future
-	vector<Partical*> particals;
+	vector<Pawn*> particles;
 
 	
 	virtual void update() override;

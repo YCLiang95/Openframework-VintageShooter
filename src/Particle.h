@@ -3,7 +3,7 @@
 #include "Sprite.h"
 
 //The partical, emitted by the emitter
-class Partical : public GameObject{
+class Particle : public GameObject{
 public:
 
 
@@ -17,5 +17,4 @@ public:
 	glm::vec3 direction;
 	float speed;
 	float timeOfSpawn;
-	bool isDead = false;
 };

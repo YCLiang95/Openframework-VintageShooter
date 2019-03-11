@@ -11,6 +11,10 @@ Pawn::~Pawn()
 {
 }
 
+void Pawn::update() {
+	transform.update();
+}
+
 void Pawn::draw() {
 	ofPushMatrix();
 	//Transform based on parent position

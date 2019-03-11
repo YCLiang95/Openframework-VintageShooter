@@ -47,7 +47,7 @@ void Turret::draw() {
 //Temporary put the emitter set up code here
 //They will be moved to the partical system once finished
 Turret::Turret() {
-	gun = ParticalEmitter();
+	gun = ParticleEmitter();
 	gun.transform.parent = &transform;
 	transform.indenpendentRotation = true;
 	gun.emmitionSound.load("test_sound.wav");

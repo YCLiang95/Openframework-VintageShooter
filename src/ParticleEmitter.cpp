@@ -1,7 +1,7 @@
-#include "ParticalEmitter.h"
+#include "ParticleEmitter.h"
 #include "ofMain.h"
 
-void ParticalEmitter::update() {
+void ParticleEmitter::update() {
 	if (active) {
 		if ((ofGetElapsedTimeMillis() - timeLastSpawn) > interval) {
 			spawn();
@@ -9,11 +9,11 @@ void ParticalEmitter::update() {
 	}
 
 	//Update all particals
-	for (vector<Partical*>::iterator it = particals.begin(); it != particals.end();) {
+	for (vector<Pawn*>::iterator it = particles.begin(); it != particles.end();) {
 		(**it).update();
 		//Removed dead particals
 		if ((**it).isDead) {
-			it = particals.erase(it);
+			it = particles.erase(it);
 			//cout << "Partical Despawn!" << endl;
 		} else {
 			++it;
@@ -23,13 +23,15 @@ void ParticalEmitter::update() {
 
 //Spawn a new partical
 //This part will be modulized later for more flexibility
-void ParticalEmitter::spawn() {
+void ParticleEmitter::spawn() {
 	//cout << "Partical Spawn!" << endl;
 	timeLastSpawn = ofGetElapsedTimeMillis();
-	Partical* partical = new Partical();
-	partical->timeOfSpawn = ofGetElapsedTimeMillis();
-	partical->lifeSpan = lifeSpan;
-	partical->speed = speed;
+	//Particle* partical = new Particle();
+
+	Pawn* partical = new Pawn(particle);
+
+	//partical->timeOfSpawn = ofGetElapsedTimeMillis();
+	//partical->lifeSpan = lifeSpan;
 
 	partical->sprite = sprite;
 	emmitionSound.play();
@@ -37,14 +39,15 @@ void ParticalEmitter::spawn() {
 	float angle = transform.getAngle();
 	direction.x = cos(angle - PI / 2);
 	direction.y = sin(angle - PI / 2);
-	partical->direction = direction;
 
 	partical->transform.position = transform.getPosition();
+	partical->transform.speed = speed;
+	partical->transform.direction = direction;
 
-	particals.push_back(partical);
+	particles.push_back(partical);
 }
 
-void ParticalEmitter::draw() {
-	for (vector<Partical*>::iterator it = particals.begin(); it != particals.end(); ++it) 
+void ParticleEmitter::draw() {
+	for (vector<Pawn*>::iterator it = particles.begin(); it != particles.end(); ++it)
 		if (!(**it).isDead) (**it).draw();
 }

@@ -21,7 +21,7 @@ public:
 	float speed = 0.0f;
 	float acceration = 0.0f;
 	float maxSpeed = 1.0f;
-	float drag = 0.5f;
+	float drag = 0.0f;
 
 	//Current movemenet direction
 	//It's different from angle

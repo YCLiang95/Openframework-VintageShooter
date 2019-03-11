@@ -1,6 +1,6 @@
 #pragma once
 #include "Pawn.h"
-#include "ParticalEmitter.h"
+#include "ParticleEmitter.h"
 
 //Player controlled turret
 class Turret : public Pawn{
@@ -20,6 +20,6 @@ public:
 	//The emitter for the gun
 	//Since partical system isn't finished yet
 	//Emitters are attached to gun for now
-	ParticalEmitter gun;
+	ParticleEmitter gun;
 
 };

@@ -17,6 +17,7 @@ public:
 	virtual void draw();
 	GameObject();
 	~GameObject() {};
+	bool isDead = false;
 
 	//Some event pass in just for override
 	void virtual keyPressed(int key) {};
