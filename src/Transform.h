@@ -21,7 +21,8 @@ public:
 	float speed = 0.0f;
 	float acceration = 0.0f;
 	float maxSpeed = 1.0f;
-	float drag = 0.0f;
+	float drag = 0.5f;
+	float size = 32.0f;
 
 	//Current movemenet direction
 	//It's different from angle
@@ -37,4 +38,11 @@ public:
 	bool indenpendentRotation = false;
 
 	void update();
+
+	bool static collide(Transform a, Transform b) {
+		if (glm::distance(a.position, b.position) <= (a.size + b.size))
+			return true;
+		else
+			return false;
+	}
 };

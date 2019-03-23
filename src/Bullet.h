@@ -5,5 +5,5 @@ class Bullet:public Particle {
 public:
 	int damage;
 
-	void update() override;
+	virtual void update() override;
 };

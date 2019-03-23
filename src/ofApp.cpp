@@ -33,6 +33,30 @@ void ofApp::startGame() {
 	gameObjects.push_back(turret);
 
 	ParticleSystem* enemySpawner = new ParticleSystem();
+	Zombie zombie = Zombie();
+	zombie.sprite.load("bullet.png");
+	zombie.transform.drag = 0.0f;
+	ParticleEmitter* spawner1 = new ParticleEmitter();
+	spawner1->interval = 3000.0f;
+	spawner1->particle = zombie;
+	spawner1->transform.position = glm::vec3(300, 0, 0);
+	spawner1->speed = 1.0f;
+	spawner1->transform.angle = PI;
+	spawner1->direction = glm::vec3(0.0f, 1.0f, 0.0f);
+	spawner1->active = true;
+
+	ParticleEmitter* spawner2 = new ParticleEmitter();
+	spawner2->interval = 1000.0f;
+	spawner2->particle = zombie;
+	spawner2->transform.position = glm::vec3(0, 100, 0);
+	spawner2->speed = 1.0f;
+	spawner2->transform.angle = PI / 2;
+	spawner2->direction = glm::vec3(0.0f, 1.0f, 0.0f);
+	spawner2->active = true;
+
+	enemySpawner->addEmitter(spawner1);
+	enemySpawner->addEmitter(spawner2);
+	particleSystems.push_back(enemySpawner);
 }
 
 //--------------------------------------------------------------
@@ -42,6 +66,9 @@ void ofApp::update(){
 	for (vector<GameObject*>::iterator it = gameObjects.begin(); it != gameObjects.end(); ++it) {
 		(**it).update();
 	}
+	for (vector<ParticleSystem*>::iterator it = particleSystems.begin(); it != particleSystems.end(); ++it) {
+		(**it).update();
+	}
 }
 
 //--------------------------------------------------------------
@@ -49,6 +76,9 @@ void ofApp::draw(){
 	if (!gameStart) startButton.draw();
 	gui.draw();
 	for (vector<GameObject*>::iterator it = gameObjects.begin(); it != gameObjects.end(); ++it) {
+		(**it).draw();
+	}
+	for (vector<ParticleSystem*>::iterator it = particleSystems.begin(); it != particleSystems.end(); ++it) {
 		(**it).draw();
 	}
 }

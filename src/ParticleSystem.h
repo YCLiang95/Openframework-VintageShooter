@@ -5,12 +5,12 @@
 
 class ParticleSystem {
 public:
-	vector<ParticleEmitter> emitters;
+	vector<ParticleEmitter*> emitters;
 
 	void update();
 
 	void addEmitter(glm::vec3 pos);
-	void addEmitter(ParticleEmitter emitter);
+	void addEmitter(ParticleEmitter* emitter);
 
 	void draw();
 };

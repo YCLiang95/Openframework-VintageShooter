@@ -6,7 +6,7 @@
 
 class ParticleEmitter: public GameObject {
 public:
-	Sprite sprite;
+	//Sprite sprite;
 	Pawn particle;
 
 	//How long spawned partical should lived, in mil-sec

@@ -32,5 +32,6 @@ class ofApp : public ofBaseApp{
 		Button startButton;
 		bool gameStart = false;
 		vector<GameObject*> gameObjects;
+		vector<ParticleSystem*> particleSystems;
 		void startGame();
 };

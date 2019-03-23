@@ -1,6 +1,7 @@
 #pragma once
 #include "Pawn.h"
 #include "ParticleEmitter.h"
+#include "Bullet.h"
 
 //Player controlled turret
 class Turret : public Pawn{

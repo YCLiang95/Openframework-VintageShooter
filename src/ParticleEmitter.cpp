@@ -29,12 +29,14 @@ void ParticleEmitter::spawn() {
 	//Particle* partical = new Particle();
 
 	Pawn* partical = new Pawn(particle);
+	//partical->sprite = particle.sprite;
 
 	//partical->timeOfSpawn = ofGetElapsedTimeMillis();
 	//partical->lifeSpan = lifeSpan;
 
-	partical->sprite = sprite;
-	emmitionSound.play();
+	//partical->sprite = sprite;
+	if (emmitionSound.isLoaded())
+		emmitionSound.play();
 
 	float angle = transform.getAngle();
 	direction.x = cos(angle - PI / 2);

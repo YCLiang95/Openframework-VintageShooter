@@ -79,6 +79,12 @@
     <ClCompile Include="ParticleSystem.cpp">
       <Filter>src\GameObject\ParticalSystem</Filter>
     </ClCompile>
+    <ClCompile Include="Zombie.cpp">
+      <Filter>src\GameObject\Enemy\Zombie</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimatedSprite.cpp">
+      <Filter>src\GameObject\Sprite</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -110,6 +116,9 @@
     </Filter>
     <Filter Include="src\GameObject\Enemy">
       <UniqueIdentifier>{d840d9e6-d461-45d8-ad7b-bed85ba1a46c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\GameObject\Enemy\Zombie">
+      <UniqueIdentifier>{631e25c0-ced5-451a-ac5a-bef954a6d799}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -188,14 +197,14 @@
     <ClInclude Include="src\Sprite.h">
       <Filter>src\GameObject\Sprite</Filter>
     </ClInclude>
-    <ClInclude Include="src\Zombie.h">
-      <Filter>src\GameObject\Enemy</Filter>
-    </ClInclude>
     <ClInclude Include="src\Bullet.h">
       <Filter>src\GameObject\ParticalSystem</Filter>
     </ClInclude>
     <ClInclude Include="src\AnimatedSprite.h">
       <Filter>src\GameObject\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Zombie.h">
+      <Filter>src\GameObject\Enemy\Zombie</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
