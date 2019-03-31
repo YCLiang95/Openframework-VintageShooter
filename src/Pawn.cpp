@@ -16,5 +16,10 @@ void Pawn::update() {
 }
 
 void Pawn::draw() {
-	sprite.draw(transform);
+	sprite->draw(transform);
+}
+
+Pawn* Pawn::clone() {
+	cout << "Pawn clone" << endl;
+	return NULL;
 }

@@ -32,16 +32,7 @@ void Turret::keyReleased(int key) {
 
 //Most part are the same as it's parent pawn
 void Turret::draw() {
-	ofPushMatrix();
-		ofTranslate(transform.getPosition());
-		//Becase turrent roate follows mouse
-		//It should not inherate parent's rotation
-		ofRotate(transform.angle * 180 / PI);
-		ofPushMatrix();
-			ofTranslate(-sprite.image.getWidth() / 2, -sprite.image.getHeight() / 2);
-			sprite.image.draw(0, 0);
-		ofPopMatrix();
-	ofPopMatrix();
+	sprite->draw(transform);
 	gun.draw();
 }
 
@@ -54,15 +45,16 @@ Turret::Turret() {
 	transform.indenpendentRotation = true;
 	gun.emmitionSound.load("test_sound.wav");
 	gun.emmitionSound.setVolume(0.1f);
-	//gun.sprite.load("bullet.png");
-	Bullet bullet = Bullet();
-	bullet.lifeSpan = 3000.0f;
-	bullet.sprite.load("bullet.png");
-	bullet.transform.drag = 0.0f;
+
+	Bullet* bullet = new Bullet();
+	bullet->lifeSpan = 3000.0f;
+	bullet->sprite = new Sprite();
+	bullet->sprite->load("bullet.png");
+	bullet->transform.drag = 0.0f;
+	bullet->trials = new Sprite();
+	bullet->trials->load("bulletTrail.png");
 	gun.particle = bullet;
-	//bullet.transform.s
 	gun.interval = 1000.0f;
-	//gun.lifeSpan = 3000.0f;
 	gun.speed = 20.0f;
 }
 

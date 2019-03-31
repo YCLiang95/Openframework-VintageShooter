@@ -17,25 +17,29 @@ void ofApp::startGame() {
 	gui.add(RoF.setup("Fire interval", 1000, 100, 3000));
 
 	MouseCursor* mouse = new MouseCursor();
-	mouse->sprite.load("crosshair.png");
+	mouse->sprite = new Sprite();
+	mouse->sprite->load("crosshair.png");
 	gameObjects.push_back(mouse);
 
 	PlayerShip* Ship = new PlayerShip();
-	Ship->sprite.load("ship.png");
+	Ship->sprite = new Sprite();
+	Ship->sprite->load("ship.png");
 	Ship->transform.position = glm::vec3(300, 300, 0);
 	gameObjects.push_back(Ship);
 
 	Turret* turret = new Turret();
-	turret->sprite.load("Turret.png");
+	turret->sprite = new Sprite();
+	turret->sprite->load("Turret.png");
 	turret->transform.position = glm::vec3(0, 0, 0);
 	turret->transform.parent = &Ship->transform;
 	gun = turret;
 	gameObjects.push_back(turret);
 
 	ParticleSystem* enemySpawner = new ParticleSystem();
-	Zombie zombie = Zombie();
-	zombie.sprite.load("bullet.png");
-	zombie.transform.drag = 0.0f;
+	Zombie* zombie = new Zombie();
+	zombie->sprite = new Sprite();
+	zombie->sprite->load("bullet.png");
+	zombie->transform.drag = 0.0f;
 	ParticleEmitter* spawner1 = new ParticleEmitter();
 	spawner1->interval = 3000.0f;
 	spawner1->particle = zombie;
@@ -43,7 +47,7 @@ void ofApp::startGame() {
 	spawner1->speed = 1.0f;
 	spawner1->transform.angle = PI;
 	spawner1->direction = glm::vec3(0.0f, 1.0f, 0.0f);
-	spawner1->active = true;
+	//spawner1->active = true;
 
 	ParticleEmitter* spawner2 = new ParticleEmitter();
 	spawner2->interval = 1000.0f;
@@ -52,7 +56,7 @@ void ofApp::startGame() {
 	spawner2->speed = 1.0f;
 	spawner2->transform.angle = PI / 2;
 	spawner2->direction = glm::vec3(0.0f, 1.0f, 0.0f);
-	spawner2->active = true;
+	//spawner2->active = true;
 
 	enemySpawner->addEmitter(spawner1);
 	enemySpawner->addEmitter(spawner2);

@@ -12,9 +12,10 @@ public:
 	~Pawn();
 
 	//A single image static sprite
-	Sprite sprite;
+	Sprite* sprite;
 
 	virtual void draw() override;
 	virtual void update() override;
+	virtual Pawn* clone();
 };
 

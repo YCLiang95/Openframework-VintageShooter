@@ -76,14 +76,14 @@
     <ClCompile Include="src\Bullet.cpp">
       <Filter>src\GameObject\ParticalSystem</Filter>
     </ClCompile>
-    <ClCompile Include="ParticleSystem.cpp">
-      <Filter>src\GameObject\ParticalSystem</Filter>
-    </ClCompile>
-    <ClCompile Include="Zombie.cpp">
+    <ClCompile Include="src\Zombie.cpp">
       <Filter>src\GameObject\Enemy\Zombie</Filter>
     </ClCompile>
-    <ClCompile Include="AnimatedSprite.cpp">
+    <ClCompile Include="src\AnimatedSprite.cpp">
       <Filter>src\GameObject\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ParticleSystem.cpp">
+      <Filter>src\GameObject\ParticalSystem</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

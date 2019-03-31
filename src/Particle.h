@@ -9,6 +9,7 @@ public:
 
 	virtual void update() override;
 	virtual void draw() override;
+	virtual Pawn* clone() override;
 
 	float lifeSpan;
 	glm::vec3 direction;

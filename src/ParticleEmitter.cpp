@@ -28,7 +28,8 @@ void ParticleEmitter::spawn() {
 	timeLastSpawn = ofGetElapsedTimeMillis();
 	//Particle* partical = new Particle();
 
-	Pawn* partical = new Pawn(particle);
+	//Pawn* partical = new Pawn(*particle);
+	Pawn* partical = particle->clone();
 	//partical->sprite = particle.sprite;
 
 	//partical->timeOfSpawn = ofGetElapsedTimeMillis();
@@ -51,6 +52,7 @@ void ParticleEmitter::spawn() {
 }
 
 void ParticleEmitter::draw() {
-	for (vector<Pawn*>::iterator it = particles.begin(); it != particles.end(); ++it)
+	for (vector<Pawn*>::iterator it = particles.begin(); it != particles.end(); ++it) {
 		if (!(**it).isDead) (**it).draw();
+	}
 }
