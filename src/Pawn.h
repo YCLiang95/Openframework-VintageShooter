@@ -13,9 +13,12 @@ public:
 
 	//A single image static sprite
 	Sprite* sprite;
+	int collisionLayer = 0;
 
 	virtual void draw() override;
 	virtual void update() override;
 	virtual Pawn* clone();
+
+	virtual bool collide(Pawn* A, Pawn* B);
 };
 

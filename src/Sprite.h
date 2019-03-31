@@ -11,6 +11,7 @@ public:
 	void load(string path);
 
 	void draw(Transform t);
+	void draw(glm::vec3 position);
 	//offset from image files, not in use yet
 	int offset_x, offset_y;
 };

@@ -24,12 +24,15 @@ void ofApp::startGame() {
 	PlayerShip* Ship = new PlayerShip();
 	Ship->sprite = new Sprite();
 	Ship->sprite->load("ship.png");
+	Ship->sprite->image.resize(128, 128);
 	Ship->transform.position = glm::vec3(300, 300, 0);
 	gameObjects.push_back(Ship);
 
-	Turret* turret = new Turret();
+	ParticleSystem* bulletSystem = new ParticleSystem();
+	Turret* turret = new Turret(bulletSystem);
 	turret->sprite = new Sprite();
 	turret->sprite->load("Turret.png");
+	turret->sprite->image.resize(128, 128);
 	turret->transform.position = glm::vec3(0, 0, 0);
 	turret->transform.parent = &Ship->transform;
 	gun = turret;
@@ -40,33 +43,35 @@ void ofApp::startGame() {
 	zombie->sprite = new Sprite();
 	zombie->sprite->load("bullet.png");
 	zombie->transform.drag = 0.0f;
-	ParticleEmitter* spawner1 = new ParticleEmitter();
+
+	ParticleEmitter* spawner1 = new ParticleEmitter(enemySpawner, zombie);
 	spawner1->interval = 3000.0f;
 	spawner1->particle = zombie;
 	spawner1->transform.position = glm::vec3(300, 0, 0);
 	spawner1->speed = 1.0f;
 	spawner1->transform.angle = PI;
 	spawner1->direction = glm::vec3(0.0f, 1.0f, 0.0f);
-	//spawner1->active = true;
+	spawner1->active = true;
 
-	ParticleEmitter* spawner2 = new ParticleEmitter();
+	ParticleEmitter* spawner2 = new ParticleEmitter(enemySpawner, zombie);
 	spawner2->interval = 1000.0f;
 	spawner2->particle = zombie;
 	spawner2->transform.position = glm::vec3(0, 100, 0);
 	spawner2->speed = 1.0f;
 	spawner2->transform.angle = PI / 2;
 	spawner2->direction = glm::vec3(0.0f, 1.0f, 0.0f);
-	//spawner2->active = true;
+	spawner2->active = true;
 
-	enemySpawner->addEmitter(spawner1);
-	enemySpawner->addEmitter(spawner2);
+	gameObjects.push_back(spawner1);
+	gameObjects.push_back(spawner2);
 	particleSystems.push_back(enemySpawner);
+	particleSystems.push_back(bulletSystem);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 	if (gameStart)
-		gun->gun.interval = RoF;
+		gun->gun->interval = RoF;
 	for (vector<GameObject*>::iterator it = gameObjects.begin(); it != gameObjects.end(); ++it) {
 		(**it).update();
 	}
@@ -114,15 +119,21 @@ void ofApp::mouseMoved(int x, int y ){
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
+	mouseMoved(x, y);
 }
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
+	if (button == 0) 
+		for (vector<GameObject*>::iterator it = gameObjects.begin(); it != gameObjects.end(); ++it)
+			(**it).keyPressed(' ');
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
-
+	if (button == 0)
+		for (vector<GameObject*>::iterator it = gameObjects.begin(); it != gameObjects.end(); ++it)
+			(**it).keyReleased(' ');
 }
 
 //--------------------------------------------------------------

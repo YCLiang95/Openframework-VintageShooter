@@ -3,11 +3,12 @@
 #include "Particle.h"
 #include "Pawn.h"
 #include "ofMain.h"
+#include "ParticleSystem.h"
 
 class ParticleEmitter: public GameObject {
 public:
-	//Sprite sprite;
 	Pawn* particle;
+	ParticleSystem* pSystem;
 
 	//How long spawned partical should lived, in mil-sec
 	float lifeSpan;
@@ -31,6 +32,7 @@ public:
 	//This might be move to partical system class in the future
 	vector<Pawn*> particles;
 
+	ParticleEmitter(ParticleSystem* ps, Pawn* p);
 	
 	virtual void update() override;
 	virtual void draw() override;

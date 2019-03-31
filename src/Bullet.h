@@ -9,4 +9,6 @@ public:
 	virtual void update() override;
 	virtual void draw() override;
 	virtual Pawn* clone() override;
+	glm::vec3 firedPosition;
+	ofPolyline trail;
 };

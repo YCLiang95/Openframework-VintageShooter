@@ -20,6 +20,11 @@ void Pawn::draw() {
 }
 
 Pawn* Pawn::clone() {
-	cout << "Pawn clone" << endl;
-	return NULL;
+	Pawn* result = new Pawn(*this);
+	return result;
+}
+
+bool Pawn::collide(Pawn* A, Pawn* B) {
+	if (A->collisionLayer == B->collisionLayer)
+		return Transform::collide(A->transform, B->transform);
 }

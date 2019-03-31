@@ -26,8 +26,4 @@ public:
 	void virtual mouseDragged(int x, int y, int button) {};
 	void virtual mousePressed(int x, int y, int button) {};
 	void virtual mouseReleased(int x, int y, int button) {};
-
-
-	//void collision(glm::vec3);
-
 };

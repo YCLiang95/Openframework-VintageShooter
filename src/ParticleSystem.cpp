@@ -1,20 +1,27 @@
 #include "ParticleSystem.h"
 
 void ParticleSystem::update(){
-	for (vector<ParticleEmitter*>::iterator it = emitters.begin(); it != emitters.end(); ++it) {
+	//Update all particals
+	for (vector<Pawn*>::iterator it = particles.begin(); it != particles.end();) {
 		(**it).update();
+		//Removed dead particals
+		if ((**it).isDead) {
+			it = particles.erase(it);
+			//cout << "Partical Despawn!" << endl;
+		}
+		else {
+			++it;
+		}
 	}
 };
 
 void ParticleSystem::draw() {
-	for (vector<ParticleEmitter*>::iterator it = emitters.begin(); it != emitters.end(); ++it) {
-		(**it).draw();
+	//draw all particle
+	for (vector<Pawn*>::iterator it = particles.begin(); it != particles.end(); ++it) {
+		if (!(**it).isDead) (**it).draw();
 	}
 };
 
-void ParticleSystem::addEmitter(glm::vec3 pos) {
-}
-
-void ParticleSystem::addEmitter(ParticleEmitter* emitter) {
-	emitters.push_back(emitter);
+void ParticleSystem::addParticle(Pawn* particle) {
+	particles.push_back(particle);
 }

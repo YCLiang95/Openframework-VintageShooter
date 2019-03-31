@@ -1,5 +1,6 @@
-#include "ParticleEmitter.h"
 #include "ofMain.h"
+#include "ParticleEmitter.h"
+
 
 void ParticleEmitter::update() {
 	if (active) {
@@ -24,18 +25,11 @@ void ParticleEmitter::update() {
 //Spawn a new partical
 //This part will be modulized later for more flexibility
 void ParticleEmitter::spawn() {
-	//cout << "Partical Spawn!" << endl;
 	timeLastSpawn = ofGetElapsedTimeMillis();
-	//Particle* partical = new Particle();
 
-	//Pawn* partical = new Pawn(*particle);
-	Pawn* partical = particle->clone();
-	//partical->sprite = particle.sprite;
+	particle->transform.position = transform.getPosition();
+	Pawn* p = particle->clone();
 
-	//partical->timeOfSpawn = ofGetElapsedTimeMillis();
-	//partical->lifeSpan = lifeSpan;
-
-	//partical->sprite = sprite;
 	if (emmitionSound.isLoaded())
 		emmitionSound.play();
 
@@ -43,16 +37,27 @@ void ParticleEmitter::spawn() {
 	direction.x = cos(angle - PI / 2);
 	direction.y = sin(angle - PI / 2);
 
-	partical->transform.position = transform.getPosition();
-	partical->transform.speed = speed;
-	partical->transform.direction = direction;
-	partical->transform.speedDirection = direction;
+	p->transform.angle = angle;
+	p->transform.speed = speed;
+	p->transform.direction = direction;
+	p->transform.speedDirection = direction;
 
-	particles.push_back(partical);
+	pSystem->addParticle(p);
 }
 
 void ParticleEmitter::draw() {
 	for (vector<Pawn*>::iterator it = particles.begin(); it != particles.end(); ++it) {
 		if (!(**it).isDead) (**it).draw();
 	}
+}
+
+ParticleEmitter::ParticleEmitter(ParticleSystem* ps, Pawn* p) {
+	pSystem = ps;
+	particle = p;
+	transform = Transform();
+	direction = glm::vec3(0, 0, 0);
+	lifeSpan = 3000;
+	speed = 1;
+	interval = 1000;
+	timeLastSpawn = ofGetElapsedTimeMillis();
 }

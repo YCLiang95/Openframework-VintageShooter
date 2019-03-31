@@ -1,16 +1,13 @@
 #pragma once
-#include "ParticleEmitter.h"
+#include"Pawn.h"
+
 //Not Implemented yet
 //A Partical system will controll mutilple emitter
 
 class ParticleSystem {
 public:
-	vector<ParticleEmitter*> emitters;
-
 	void update();
-
-	void addEmitter(glm::vec3 pos);
-	void addEmitter(ParticleEmitter* emitter);
-
+	vector<Pawn*> particles;
 	void draw();
+	void addParticle(Pawn* particle);
 };

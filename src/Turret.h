@@ -15,12 +15,12 @@ public:
 	virtual void update() override;
 	virtual void draw() override;
 
-	Turret();
+	Turret(ParticleSystem* p);
 	~Turret() {};
 
 	//The emitter for the gun
 	//Since partical system isn't finished yet
 	//Emitters are attached to gun for now
-	ParticleEmitter gun;
+	ParticleEmitter* gun;
 
 };
