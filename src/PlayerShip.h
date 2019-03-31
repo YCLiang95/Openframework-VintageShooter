@@ -11,4 +11,5 @@ public:
 	virtual void update() override;
 private:
 	bool isAccelerating;
+	int accerating;
 };

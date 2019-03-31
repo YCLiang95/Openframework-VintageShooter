@@ -4,11 +4,11 @@ void PlayerShip::keyPressed(int key) {
 	switch (key) {
 	case OF_KEY_UP:
 	case 'w' :
-		transform.acceration = 0.5f;
+		accerating = 1;
 		break;
 	case OF_KEY_DOWN:
 	case 's':
-		transform.acceration = -0.5f;
+		accerating = -1;
 		break;
 	case OF_KEY_RIGHT:
 	case 'd':
@@ -29,7 +29,7 @@ void PlayerShip::keyReleased(int key) {
 	case 'w':
 	case OF_KEY_DOWN:
 	case 's':
-		transform.acceration = 0.0f;
+		accerating = 0;
 		break;
 	case OF_KEY_RIGHT:
 	case 'd':
@@ -43,5 +43,9 @@ void PlayerShip::keyReleased(int key) {
 }
 
 void PlayerShip::update() {
+	if (accerating != 0) {
+		transform.accerationDirection = accerating * transform.direction;
+		transform.acceration = 1.0f;
+	}
 	transform.update();
 }

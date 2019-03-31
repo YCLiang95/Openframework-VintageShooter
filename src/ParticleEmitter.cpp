@@ -45,6 +45,7 @@ void ParticleEmitter::spawn() {
 	partical->transform.position = transform.getPosition();
 	partical->transform.speed = speed;
 	partical->transform.direction = direction;
+	partical->transform.speedDirection = direction;
 
 	particles.push_back(partical);
 }

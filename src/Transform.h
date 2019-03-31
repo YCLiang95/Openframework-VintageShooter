@@ -1,6 +1,12 @@
 #pragma once
 #include "ofMain.h"
 
+class ImpulseForce {
+public:
+	float magnitude;
+	glm::vec3 direction;
+};
+
 //Similar to Unity tranformation
 //Record most position/rotation infor of a game object
 //Also include simple physics calculation
@@ -20,13 +26,15 @@ public:
 	float turningSpeed = 0.0f;
 	float speed = 0.0f;
 	float acceration = 0.0f;
-	float maxSpeed = 1.0f;
+	glm::vec3 accerationDirection;
+	float maxSpeed = 2.0f;
 	float drag = 0.5f;
 	float size = 32.0f;
 
 	//Current movemenet direction
 	//It's different from angle
 	glm::vec3 direction = glm::vec3(0, -1, 0);
+	glm::vec3 speedDirection = glm::vec3(0, -1, 0);
 
 	//Return the position, adding all the parents' transformation
 	glm::vec3 getPosition();
@@ -38,6 +46,7 @@ public:
 	bool indenpendentRotation = false;
 
 	void update();
+	void applyForce(float weight, ImpulseForce force);
 
 	bool static collide(Transform a, Transform b) {
 		if (glm::distance(a.position, b.position) <= (a.size + b.size))
