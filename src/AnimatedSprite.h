@@ -9,8 +9,8 @@ public:
 
 	void splite(int x, int y, int height, int width, int column, int row);
 
-	void update();
-	void draw(Transform t);
+	void update() override;
+	void draw(Transform t) override;
 	//offset from image files, not in use yet
 	int offset_x, offset_y;
 	int position = 0;

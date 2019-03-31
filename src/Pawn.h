@@ -19,6 +19,6 @@ public:
 	virtual void update() override;
 	virtual Pawn* clone();
 
-	virtual bool collide(Pawn* A, Pawn* B);
+	static bool collide(Pawn* A, Pawn* B);
 };
 

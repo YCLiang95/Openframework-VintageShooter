@@ -85,6 +85,9 @@
     <ClCompile Include="src\ParticleSystem.cpp">
       <Filter>src\GameObject\ParticalSystem</Filter>
     </ClCompile>
+    <ClCompile Include="src\Force.cpp">
+      <Filter>src\GameObject\Physics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -119,6 +122,9 @@
     </Filter>
     <Filter Include="src\GameObject\Enemy\Zombie">
       <UniqueIdentifier>{631e25c0-ced5-451a-ac5a-bef954a6d799}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\GameObject\Physics">
+      <UniqueIdentifier>{ee3ded24-1d3f-48fc-a376-e88555ccd0e5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -205,6 +211,9 @@
     </ClInclude>
     <ClInclude Include="src\Zombie.h">
       <Filter>src\GameObject\Enemy\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Force.h">
+      <Filter>src\GameObject\Physics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

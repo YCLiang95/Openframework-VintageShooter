@@ -1,5 +1,6 @@
 #pragma once
 #include"Pawn.h"
+#include "Force.h"
 
 //Not Implemented yet
 //A Partical system will controll mutilple emitter
@@ -10,4 +11,5 @@ public:
 	vector<Pawn*> particles;
 	void draw();
 	void addParticle(Pawn* particle);
+	void applyForce(Force force);
 };

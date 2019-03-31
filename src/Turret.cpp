@@ -45,6 +45,7 @@ Turret::Turret(ParticleSystem* p) {
 	bullet->sprite = new Sprite();
 	bullet->sprite->load("bulletTrail.png");
 	bullet->transform.drag = 0.0f;
+	bullet->transform.size = 5.0f;
 
 	gun = new ParticleEmitter(p, bullet);
 	gun->transform.parent = &transform;

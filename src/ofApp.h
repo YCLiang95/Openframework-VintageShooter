@@ -24,6 +24,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
 		static ofApp* game;
+		GameObject* camera;
 
 		ofxPanel gui;
 		ofxFloatSlider RoF;
@@ -33,5 +34,10 @@ class ofApp : public ofBaseApp{
 		bool gameStart = false;
 		vector<GameObject*> gameObjects;
 		vector<ParticleSystem*> particleSystems;
+		ParticleSystem* bullets;
+		ParticleSystem* enemies;
+
+		PlayerShip* player;
+
 		void startGame();
 };

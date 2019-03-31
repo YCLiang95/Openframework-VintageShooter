@@ -13,6 +13,9 @@ public:
 		sprite->draw(transform);
 	};
 
+	virtual void update() override{
+	}
+
 	virtual void mouseMoved(int x, int y) override {
 		transform.position.x = x;
 		transform.position.y = y;

@@ -1,11 +1,7 @@
 #pragma once
 #include "ofMain.h"
+#include "Force.h"
 
-class ImpulseForce {
-public:
-	float magnitude;
-	glm::vec3 direction;
-};
 
 //Similar to Unity tranformation
 //Record most position/rotation infor of a game object

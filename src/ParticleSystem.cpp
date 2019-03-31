@@ -25,3 +25,6 @@ void ParticleSystem::draw() {
 void ParticleSystem::addParticle(Pawn* particle) {
 	particles.push_back(particle);
 }
+
+void ParticleSystem::applyForce(Force force) {
+}

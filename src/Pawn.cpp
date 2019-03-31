@@ -24,7 +24,7 @@ Pawn* Pawn::clone() {
 	return result;
 }
 
-bool Pawn::collide(Pawn* A, Pawn* B) {
+ bool Pawn::collide(Pawn* A, Pawn* B) {
 	if (A->collisionLayer == B->collisionLayer)
 		return Transform::collide(A->transform, B->transform);
 }

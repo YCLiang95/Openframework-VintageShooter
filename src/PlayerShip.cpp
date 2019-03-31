@@ -46,6 +46,9 @@ void PlayerShip::update() {
 	if (accerating != 0) {
 		transform.accerationDirection = accerating * transform.direction;
 		transform.acceration = 1.0f;
+		AnimatedSprite* p = (AnimatedSprite*)sprite;
+		p->play = true;
+		p->update();
 	}
 	transform.update();
 }

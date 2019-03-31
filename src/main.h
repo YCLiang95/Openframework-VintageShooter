@@ -11,3 +11,4 @@
 #include "Bullet.h"
 #include "ParticleSystem.h"
 #include "Zombie.h"
+#include "AnimatedSprite.h"

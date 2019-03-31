@@ -10,8 +10,9 @@ public:
 	//Load image from path
 	void load(string path);
 
-	void draw(Transform t);
-	void draw(glm::vec3 position);
+	virtual void draw(Transform t);
+	virtual void draw(glm::vec3 position);
+	virtual void update() {};
 	//offset from image files, not in use yet
 	int offset_x, offset_y;
 };
