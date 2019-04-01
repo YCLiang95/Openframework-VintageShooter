@@ -28,6 +28,7 @@ class ofApp : public ofBaseApp{
 
 		ofxPanel gui;
 		ofxFloatSlider RoF;
+		ofxLabel guiScore;
 		Turret* gun;
 
 		Button startButton;
@@ -36,6 +37,14 @@ class ofApp : public ofBaseApp{
 		vector<ParticleSystem*> particleSystems;
 		ParticleSystem* bullets;
 		ParticleSystem* enemies;
+		ParticleSystem* debris;
+		ParticleEmitter* enemiesSpawner;
+
+		Sprite debrisSprite;
+		Sprite ground;
+		ofTrueTypeFont font;
+
+		int score = 0;
 
 		PlayerShip* player;
 
